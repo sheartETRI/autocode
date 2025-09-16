@@ -1,0 +1,13 @@
+graph:
+  entry_point: coding_node
+  nodes:
+  - name: coding_node
+    type: code_generator # type is a role
+  - name: parsing_node
+    type: json_parser # type is a role
+  edges:
+    - pair: [coding_node, parsing_node]
+      type: always
+    - pair: [parsing_node, __end__]
+      type: always
+
