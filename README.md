@@ -27,13 +27,11 @@ source test/bin/activate
 2. Install dependencies:
 ```bash
 pip install -r requirements.txt
-git submodule update --init --recursive
-pip install -e third_party/etri_langgraph
 ```
 
 ## Configuration
 
-1. Create an `api_keys.json` file in the root directory with the following structure:
+1. Create an `api_keys.json` file in the somewhere-in-the-region directory with the following structure:
 ```json
 {
   "OPEN_WEBUI_BASE_URL": "your-model-url",
@@ -47,22 +45,9 @@ The project provides two main functionalities:
 
 ### Code Generation
 
-#### LLaMA-3
-```bash
-python3 run.py generator \
-    --config_path=configs/llama3_test.yaml \
-    - run \
-    - merge_json \
-    - exit
-```
-
 #### GPT-4
 ```bash
-python3 run.py generator \
-    --config_path=configs/gpt4_test.yaml \
-    - run \
-    - merge_json \
-    - exit
+python3 run.py
 ```
 
 ## Project Structure
@@ -71,10 +56,12 @@ python3 run.py generator \
 autocode/
 ├── configs/         # Configuration files
 ├── templates/       # Template files
-├── third_party/     # Third-party dependencies
-├── .gitmodules      # Submodule information
-├── api_keys.json    # API key configuration
+├── src/             # Third-party dependencies
+├── inputs           # input directory that contains input data
+├── run.ipynb        # jupyter notebook file (same as run.py)
 ├── run.py           # Main entry point
+├── networks         # network directory (langgraph)
+├── generator.py     # main generator file
 └── requirements.txt # Python dependencies
 ```
 
