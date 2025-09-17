@@ -33,7 +33,3 @@ class Config(BaseModel):
             del data["path"]
             data = {**config, **data}
         super().__init__(**data)
-        
-
-
-

@@ -3,13 +3,12 @@ from src.utils.registry import node_registry, BaseNode
 
 @node_registry(name="json_parser")
 class JsonParser(BaseNode):
-    def __init__(self, key: str):
-        self.key = key
+    def __init__(self, **data):
+        super().__init__(**data)
     
     def __call__(self, state: dict) -> dict:
-         # import pdb; pdb.set_trace()
-
-        # raw_input = data.get(input_key, "")
+        self.print_nodename()
+        
         raw_input = state['llm_jun_out']
 
         # preprocess logic inline

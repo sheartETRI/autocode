@@ -5,9 +5,10 @@ from autoregistry import Registry
 node_registry = Registry()
 
 class BaseNode:
-    def run(self, data):
-        raise NotImplementedError("run() must be implemented.")
+    key: str
+    
+    def __init__(self, **data):
+        self.key = data.get('key', '')
 
-    def __call__(self, data):
-        result = self.run(data=data)
-        return result
+    def print_nodename(self):
+        print("node_name:", self.key)

@@ -1,5 +1,5 @@
 from typing import Dict, List, Callable
-from src.config import GraphConfig
+from src.network.config import GraphConfig
 from langgraph.graph import StateGraph
 from pydantic import BaseModel
 from typing import Callable

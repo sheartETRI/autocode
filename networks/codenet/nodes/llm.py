@@ -5,11 +5,12 @@ from src.model import *
 
 @node_registry(name="code_generator")
 class CodeGenerator(BaseNode):
-    def __init__(self, key: str):
-        self.key = key        
+    def __init__(self, **data):
+        super().__init__(**data)      
     
     def __call__(self, state: dict) -> dict:
         # import pdb; pdb.set_trace()
+        self.print_nodename()
         
         # 체인 구성을 위한 프롬프트 준비
         prompt_kwargs = {'body_template_paths': ['templates/prompt/DP']}
