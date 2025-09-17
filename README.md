@@ -57,7 +57,6 @@ autocode/
 ├── templates/       # Template files
 ├── src/             # Third-party dependencies
 ├── inputs           # input directory that contains input data
-├── run.ipynb        # jupyter notebook file (same as run.py)
 ├── run.py           # Main entry point
 ├── networks         # network directory (langgraph)
 ├── generator.py     # main generator file
