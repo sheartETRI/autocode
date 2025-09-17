@@ -31,12 +31,11 @@ pip install -r requirements.txt
 
 ## Configuration
 
-1. Create an `api_keys.json` file in the somewhere-in-the-region directory with the following structure:
-```json
-{
-  "OPEN_WEBUI_BASE_URL": "your-model-url",
-  "OPENAI_API_KEY": "your-api-key"
-}
+1. export OPENAI_API_KEY in your .bashrc file in HOME directory
+```bash
+vi ~/.bashrc
+add the following line.
+export OPENAI_API_KEY='sk-(your key)'
 ```
 
 ## Usage
