@@ -34,7 +34,7 @@ pip install -r requirements.txt
 1. export OPENAI_API_KEY in your .bashrc file in HOME directory
 ```bash
 vi ~/.bashrc
-add the following line.
+### add the following line for setting OPENAI_API key ###
 export OPENAI_API_KEY='sk-(your key)'
 ```
 
